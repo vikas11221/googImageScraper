@@ -11,7 +11,7 @@
 	angular
 		.module('boilerplate')
 		.constant('CONSTANTS', {
-			'API_URL': 'http://localhost:4000',
+			'API_URL': 'https://googleimagesscrapper.herokuapp.com',
 			'LOCAL_API_URL': 'http://localhost:4000',
 			'PRODUCTION_API_URL': 'https://googleimagesscrapper.herokuapp.com'
 		});
