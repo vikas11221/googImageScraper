@@ -1,0 +1,14 @@
+<div class="col-md-12 top-buffer">
+    <div class="col-md-4 float-left">
+        <h2>Search History</h2>
+        <ul>
+            <li ng-repeat="keyword in keywords">
+                <a href="" ng-click="getList(keyword.keyword)">{{keyword.keyword}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-8 float-left">
+        <images-grid></images-grid>
+    </div>
+</div>

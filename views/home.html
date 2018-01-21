@@ -1,0 +1,30 @@
+<div class="col-md-row">
+
+    <div class="col-md-12">
+        <form class="form-inline" name="searchForm" novalidate>
+            <div class="col-md-8 offset-md-4 top-buffer" ng-class="{'form-group':true,'text-danger':searchForm.searchKeyword.$invalid && searchForm.$submitted}">
+                <input ng-disabled="loading" class="form-control mr-sm-2 form-control-lg" required name="searchKeyword" ng-model="searchKeyword" type="search"
+                    placeholder="Search" aria-label="Search">
+                <button ng-disabled="loading" ng-click="search()" class="btn btn-outline-success btn-lg" type="submit">Search</button>
+                <p ng-if="(searchForm.searchKeyword.$error.required && searchForm.$submitted)" class="help-block">Enter The Text</p>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="row" ng-show="images">
+        <div class="col-md-3" ng-repeat="image in images">
+            <div class="thumbnail">
+                <a ng-href="{{image.url}}">
+                    <img ng-src="{{image.url}}" alt="Fjords" style="width:100%">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-if="loading">
+        <img src="images/lg.rotating-balls-spinner.gif" alt="Fjords" style="width:100%">
+
+    </div>
+
+</div>
